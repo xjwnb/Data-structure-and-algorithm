@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-27 00:29:55
- * @LastEditTime: 2020-09-27 00:48:22
+ * @LastEditTime: 2020-09-27 10:50:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \数据结构与算法\12.二叉树.js
@@ -53,6 +53,14 @@ function inOrder(node) {
     inOrder(node.left);
     console.log(node.show() + " ");
     inOrder(node.right);
+  }
+}
+// 先序遍历
+function preOrder(node) {
+  if (!(node == null)) {
+    console.log(node.show());
+    preOrder(node.left);
+    preOrder(node.right);
   }
 }
 
