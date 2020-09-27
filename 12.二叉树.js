@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-27 00:29:55
- * @LastEditTime: 2020-09-27 11:14:07
+ * @LastEditTime: 2020-09-27 11:50:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \数据结构与算法\12.二叉树.js
@@ -86,6 +86,20 @@ function getMax() {
     current = current.right;
   }
   return current.data;
+}
+// 查找
+function find(data) {
+  var current = this.root;
+  while (current != null) {
+    if (current.data === data) {
+      return current;
+    } else if (current.data > data) {
+      current = current.left;
+    } else {
+      current = current.right;
+    }
+  }
+  return null;
 }
 
 var nums = new BST();
