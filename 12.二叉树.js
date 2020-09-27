@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-27 00:29:55
- * @LastEditTime: 2020-09-27 10:50:41
+ * @LastEditTime: 2020-09-27 10:56:06
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \数据结构与算法\12.二叉树.js
@@ -63,6 +63,14 @@ function preOrder(node) {
     preOrder(node.right);
   }
 }
+// 后序遍历
+function postOrder(node) {
+  if (!(node == null)) {
+    postOrder(node.left);
+    postOrder(node.right);
+    console.log(node.show());
+  }
+}
 
 var nums = new BST();
 nums.insert(66);
@@ -72,3 +80,5 @@ nums.insert(199);
 nums.insert(300);
 nums.insert(15);
 inOrder(nums.root); // 12 15 19 66 199 300
+preOrder(nums.root); // 66 12 19 15 199 300
+postOrder(nums.root); // 15 19 13 300 199 66
