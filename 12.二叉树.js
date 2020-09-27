@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-09-27 00:29:55
- * @LastEditTime: 2020-09-27 10:56:06
+ * @LastEditTime: 2020-09-27 11:14:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \数据结构与算法\12.二叉树.js
@@ -70,6 +70,22 @@ function postOrder(node) {
     postOrder(node.right);
     console.log(node.show());
   }
+}
+// 查找最小值
+function getMin() {
+  var current = this.root;
+  while (!(current.left == null)) {
+    current = current.left;
+  }
+  return current.data;
+}
+// 查找最大值
+function getMax() {
+  var current = this.root;
+  while (!(current.right == null)) {
+    current = current.right;
+  }
+  return current.data;
 }
 
 var nums = new BST();
